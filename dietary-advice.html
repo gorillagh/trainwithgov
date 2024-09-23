@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Daily Dietary Advice - TrainWithGov</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Personalized Daily Dietary Advice</h1>
+      <p>Healthy meals tailored to your fitness goals!</p>
+    </header>
+
+    <!-- Meal Suggestions Section -->
+    <section id="meal-suggestions">
+      <h2>Your Daily Meal Recommendations</h2>
+      <p id="meal-description">Based on your preferences and fitness goals:</p>
+
+      <div id="meal-plan">
+        <!-- Placeholder for meal suggestions -->
+        <h3>Breakfast</h3>
+        <div class="meal-item">
+          <h4>Meal Name 1</h4>
+          <p>Calories: 350</p>
+          <p>Description: Brief description of the meal.</p>
+        </div>
+
+        <h3>Lunch</h3>
+        <div class="meal-item">
+          <h4>Meal Name 2</h4>
+          <p>Calories: 450</p>
+          <p>Description: Brief description of the meal.</p>
+        </div>
+
+        <h3>Dinner</h3>
+        <div class="meal-item">
+          <h4>Meal Name 3</h4>
+          <p>Calories: 500</p>
+          <p>Description: Brief description of the meal.</p>
+        </div>
+
+        <h3>Snacks</h3>
+        <div class="meal-item">
+          <h4>Snack Name 1</h4>
+          <p>Calories: 200</p>
+          <p>Description: Brief description of the snack.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Preferences Section -->
+    <section id="user-preferences">
+      <h2>Customize Your Meal Plan</h2>
+      <form id="preferences-form">
+        <label for="dietary-restrictions">Dietary Restrictions:</label>
+        <input
+          type="text"
+          id="dietary-restrictions"
+          name="dietary-restrictions"
+          placeholder="e.g., vegetarian, gluten-free"
+        />
+
+        <label for="favorite-cuisines">Favorite Cuisines:</label>
+        <input
+          type="text"
+          id="favorite-cuisines"
+          name="favorite-cuisines"
+          placeholder="e.g., Italian, Mexican"
+        />
+
+        <button type="submit">Update Meal Plan</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scheduler.html">Daily Workout Scheduler</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to integrate dietary/nutrition API and handle meal plan generation (to be implemented later) -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
