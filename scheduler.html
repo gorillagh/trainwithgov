@@ -4,26 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Workout Scheduler - TrainWithGov</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assests/styles/globals.css" />
+    <link rel="stylesheet" href="./assests/styles/scheduler.css" />
   </head>
   <body>
-    <!-- Header Section -->
-    <header>
-      <h1>Daily Workout Scheduler</h1>
-      <p id="motivational-quote">"Your only limit is you."</p>
-      <p id="user-details"></p>
-      <!-- User's name and fitness goal will be displayed here -->
-    </header>
+    <div id="main-content" class="hidden">
+      <!-- Header Section -->
+      <header>
+        <h1>Daily Workout Scheduler</h1>
+        <h2 class="motivational-message">
+          <!-- ---motivaational message will be displayed here-- -->
+        </h2>
+        <small class="motivation-author">
+          <!-- --Authors name goes here--- -->
+        </small>
+        <p id="user-details">
+          <!-- User's name and fitness goal will be displayed here -->
+        </p>
+      </header>
 
-    <!-- Daily Workout Section -->
-    <section id="daily-workout">
-      <h2>Today's Workout for <span id="today-date"></span></h2>
-      <p id="body-part">Focus: Upper Body</p>
-      <!-- Brief on body part for the day -->
+      <!-- Daily Workout Section -->
+      <section id="daily-workout">
+        <h2><span id="day-of-week"></span>'s Workout</h2>
+        <p id="body-part"></p>
+        <!-- Brief on body part for the day -->
 
-      <!-- Workout Day Selection -->
-      <form id="day-selector">
-        <label for="workout-day">Select Workout Day:</label>
+        <!-- Workout Day Selection -->
+        <form id="day-selector">
+          <label for="workout-day">Select Workout Day:</label>
           <select id="workout-day" name="workout-day" required>
             <option value="0">Sunday</option>
             <option value="1">Monday</option>
@@ -33,58 +41,57 @@
             <option value="5">Friday</option>
             <option value="6">Saturday</option>
           </select>
-        <button id="view-workout-btn" type="submit">View Workout</button>
-      </form>
+          <button id="view-workout-btn" type="submit">View Workout</button>
+        </form>
 
-      <!-- List of Exercises -->
-      <div id="exercise-list">
-        <h3>Exercises:</h3>
-        <ul>
-          <li>
-            <h4>Exercise Name 1</h4>
-            <button class="exercise-btn">View Details</button>
-          </li>
-          <li>
-            <h4>Exercise Name 2</h4>
-            <button class="exercise-btn">View Details</button>
-          </li>
-          <!-- More exercises will be added dynamically here -->
+        <!-- List of Exercises -->
+        <div id="exercise-list">
+          <h3>Exercises:</h3>
+          <!-- ---display exercises here-- -->
+        </div>
+      </section>
+
+      <!-- Progress Tracker -->
+      <section id="progress-tracker">
+        <h2>Your Progress</h2>
+        <p>Completed Exercises:</p>
+        <ul id="completed-exercises">
+          <!-- Completed exercises will be added here dynamically -->
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Progress Tracker -->
-    <section id="progress-tracker">
-      <h2>Your Progress</h2>
-      <p>Completed Exercises:</p>
-      <ul id="completed-exercises">
-        <!-- Completed exercises will be added here dynamically -->
-      </ul>
-    </section>
-
-    <!-- Modal for Exercise Details -->
-    <div id="exercise-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-exercise-name"></h2>
-        <img id="modal-exercise-image" src="" alt="Exercise Image" />
-        <p id="modal-exercise-description"></p>
-        <h3>Steps:</h3>
-        <ol id="modal-exercise-steps"></ol>
+      <!-- Modal for Exercise Details -->
+      <div id="exercise-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-exercise-name"></h2>
+          <img id="modal-exercise-image" src="" alt="Exercise Image" />
+          <p id="modal-exercise-description"></p>
+          <h3>Steps:</h3>
+          <ol id="modal-exercise-steps"></ol>
+        </div>
       </div>
+
+      <!-- Footer Section -->
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dietary-advice.html">Dietary Advice</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
+      </footer>
     </div>
-
-    <!-- Footer Section -->
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dietary-advice.html">Dietary Advice</a></li>
-        </ul>
-      </nav>
-      <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
-    </footer>
-
+    <!-- /* From Uiverse.io by mobinkakei */ -->
+    <div class="wrapper" id="loading-ui">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
     <!-- Script to integrate ExerciseDB API and handle modal functionality (to be implemented later) -->
     <script src="./assests/scripts/scheduler.js"></script>
   </body>

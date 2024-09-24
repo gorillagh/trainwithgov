@@ -4,96 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TrainWithGov - Home</title>
-    <link rel="stylesheet" href="./assests/styles/globals.css">
+    <link rel="stylesheet" href="./assests/styles/globals.css" />
     <link rel="stylesheet" href="./assests/styles/index.css" />
   </head>
   <body>
-    <!-- Hero Section -->
-    <header>
-      <div class="hero">
-        
-        <h1>Welcome to TrainWithGov</h1>
-        <p>Your personal fitness journey starts here!</p>
-        <p>"Motivation gets you started, habit keeps you going."</p>
-        <form action="scheduler.html" method="GET">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required />
+    <div id="main-content" class="hidden">
+      <!-- Hero Section -->
+      <header>
+        <div class="hero">
+          <h1>Welcome to TrainWithGov</h1>
+          <p>Your personal fitness journey starts here!</p>
+          <h2 class="motivational-message">
+            "Motivation gets you started, habit keeps you going."
+          </h2>
+          <form action="">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
 
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required />
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
 
-          <label for="age">Your Age:</label>
-          <input type="number" id="age" name="age" min="1" required />
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" min="1" required />
 
-          <label for="gender">Your Gender:</label>
-          <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+            <label for="gender">Your Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
 
-          <label for="dietary-goals">Your Dietary Goal:</label>
-          <select id="dietary-goals" name="dietary-goals" required>
-            <option value="weight-loss">Weight Loss</option>
-            <option value="weight-gain">Weight Gain</option>
-            <option value="maintenance">Maintenance</option>
-          </select>
+            <label for="dietary-goals">Your Dietary Goal:</label>
+            <select id="dietary-goals" name="dietary-goals" required>
+              <option value="weight-loss">Weight Loss</option>
+              <option value="weight-gain">Weight Gain</option>
+              <option value="maintenance">Maintenance</option>
+            </select>
 
-          <label for="fitness-goals">Your Fitness Goal:</label>
-          <select id="fitness-goals" name="fitness-goals" required>
-            <option value="weight-loss">Weight Loss</option>
-            <option value="muscle-gain">Muscle Gain</option>
-            <option value="endurance">Endurance</option>
-            <option value="flexibility">Flexibility</option>
-          </select>
+            <label for="fitness-goals">Your Fitness Goal:</label>
+            <select id="fitness-goals" name="fitness-goals" required>
+              <option value="weight-loss">Weight Loss</option>
+              <option value="muscle-gain">Muscle Gain</option>
+              <option value="endurance">Endurance</option>
+              <option value="flexibility">Flexibility</option>
+            </select>
 
-          <button type="submit">Get Started</button>
-        </form>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-      <h2>About TrainWithGov</h2>
-      <p>
-        Hi, I'm Governor, your personal fitness trainer. I believe in empowering
-        people to achieve their fitness goals through consistency, balanced
-        routines, and a focus on both physical and mental well-being.
-      </p>
-      <p>
-        At TrainWithGov, we aim to guide you through every step of your fitness
-        journey with personalized workout routines and dietary plans tailored to
-        your specific goals. This app is designed to bring my coaching to you
-        anytime, anywhere, ensuring you stay on track to reach your targets even
-        when I'm not physically there with you.
-      </p>
-      <p>
-        <strong>Fitness Philosophy:</strong> "A healthy body nurtures a healthy
-        mind. When you take control of your fitness, you take control of your
-        life."
-      </p>
-    </section>
-
-    <!-- Footer -->
-    <footer> 
-      <nav>
-        <ul>
-          <li><a href="scheduler.html">Daily Workout Scheduler</a></li>
-          <li><a href="dietary-advice.html">Dietary Advice</a></li>
-        </ul>
-      </nav>
-      <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
-    </footer>
-
-
-    <!-- /* From Uiverse.io by mobinkakei */ -->
-        <div class="wrapper">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="shadow"></div>
-          <div class="shadow"></div>
-          <div class="shadow"></div>
+            <button type="submit">Get Started</button>
+          </form>
         </div>
+      </header>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About TrainWithGov</h2>
+        <p>
+          Hi, I'm Governor, your personal fitness trainer. I believe in
+          empowering people to achieve their fitness goals through consistency,
+          balanced routines, and a focus on both physical and mental well-being.
+        </p>
+        <p>
+          At TrainWithGov, we aim to guide you through every step of your
+          fitness journey with personalized workout routines and dietary plans
+          tailored to your specific goals. This app is designed to bring my
+          coaching to you anytime, anywhere, ensuring you stay on track to reach
+          your targets even when I'm not physically there with you.
+        </p>
+        <p>
+          <strong>Fitness Philosophy:</strong> "A healthy body nurtures a
+          healthy mind. When you take control of your fitness, you take control
+          of your life."
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="scheduler.html">Daily Workout Scheduler</a></li>
+            <li><a href="dietary-advice.html">Dietary Advice</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
+      </footer>
+    </div>
+    <!-- /* From Uiverse.io by mobinkakei */ -->
+    <div class="wrapper" id="loading-ui">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+
+    <script src="./assests/scripts/index.js"></script>
   </body>
 </html>
