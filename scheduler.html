@@ -11,7 +11,10 @@
     <div id="main-content" class="hidden">
       <!-- Header Section -->
       <header>
-        <h1>Daily Workout Scheduler</h1>
+        <div>
+          <h1>Daily Workout Scheduler</h1>
+          <button id="sign-out">Leave</button>
+        </div>
         <h2 class="motivational-message">
           <!-- ---motivaational message will be displayed here-- -->
         </h2>
@@ -85,12 +88,14 @@
     </div>
     <!-- /* From Uiverse.io by mobinkakei */ -->
     <div class="wrapper" id="loading-ui">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="shadow"></div>
-      <div class="shadow"></div>
-      <div class="shadow"></div>
+      <div class="loading-items-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+      </div>
     </div>
     <!-- Script to integrate ExerciseDB API and handle modal functionality (to be implemented later) -->
     <script src="./assests/scripts/scheduler.js"></script>

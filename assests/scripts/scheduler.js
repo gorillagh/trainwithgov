@@ -22,7 +22,7 @@ const motivationOptions = {
 };
 
 // Fetch exercises for the day
-const getExercisesForBodyPart = (bodyPart) => {
+const getExercisesForBodyPart = async (bodyPart) => {
   const workoutUrl = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`;
   const workoutOptions = {
     method: "GET",
@@ -32,33 +32,34 @@ const getExercisesForBodyPart = (bodyPart) => {
     },
   };
 
-  return fetch(workoutUrl, workoutOptions)
-    .then((response) => response.json())
-    .catch((error) => console.error("Error fetching exercises:", error));
+  try {
+    const response = await fetch(workoutUrl, workoutOptions);
+    return await response.json();
+  } catch (error) {
+    return console.error("Error fetching exercises:", error);
+  }
 };
 
 // Function to populate motivational message
-const displayMotivationalMessage = () => {
-  fetch(motivationUrl, motivationOptions)
-    .then((response) => response.json())
-    .then((data) => {
-      const motivationalMessage = document.querySelector(
-        ".motivational-message"
-      );
-      const motivationAuthor = document.querySelector(".motivation-author");
-      motivationalMessage.textContent = data.text || "Stay motivated!";
-      motivationAuthor.textContent = data.author || "Governor";
-    })
-    .catch((error) =>
-      console.error("Error fetching motivational message:", error)
-    );
+const displayMotivationalMessage = async () => {
+  try {
+    const response = await fetch(motivationUrl, motivationOptions);
+    const data = await response.json();
+
+    const motivationalMessage = document.querySelector(".motivational-message");
+    const motivationAuthor = document.querySelector(".motivation-author");
+    motivationalMessage.textContent = data.text || "Stay motivated!";
+    motivationAuthor.textContent = data.author || "Governor";
+  } catch (error) {
+    console.error("Error fetching motivational message:", error);
+  }
 };
 
 // Function to display user details
 const displayUserDetails = () => {
   const userDetails = JSON.parse(localStorage.getItem("userDetails"));
   if (!userDetails) {
-    window.location.href = "index.html"; // Redirect if no user data
+    window.location.href = "./index.html"; // Redirect if no user data
     return;
   }
 
@@ -80,12 +81,29 @@ const loadWorkoutForToday = (selectedDayNo) => {
     try {
       const exercises = await getExercisesForBodyPart(part);
       exercises.slice(0, 5).forEach((exercise) => {
-        const exerciseElement = document.createElement("p");
-        exerciseElement.textContent = exercise.name;
-        exerciseElement.addEventListener("click", () =>
+        const exerciseCard = document.createElement("div");
+
+        const exerciseImage = document.createElement("img");
+        exerciseImage.src = exercise.gifUrl;
+
+        const exerciseTextContainer = document.createElement("div");
+        const exerciseTitle = document.createElement("h4");
+        exerciseTitle.textContent = exercise.name;
+        const exerciseBodyPart = document.createElement("p");
+        exerciseBodyPart.textContent = exercise.bodyPart;
+        
+        exerciseTextContainer.appendChild(exerciseTitle);
+        exerciseTextContainer.appendChild(exerciseBodyPart);
+
+        exerciseCard.appendChild(exerciseImage);
+        exerciseCard.appendChild(exerciseTextContainer);
+
+        exerciseCard.classList.add("exercise-card");
+
+        exerciseCard.addEventListener("click", () =>
           openExerciseModal(exercise)
         );
-        exerciseList.appendChild(exerciseElement);
+        exerciseList.appendChild(exerciseCard);
       });
     } catch (error) {
       console.log(error);
@@ -123,6 +141,12 @@ const closeExerciseModal = () => {
   modal.style.display = "none"; // Hide modal
 };
 
+//Sign out function
+const signOut = () => {
+  localStorage.removeItem("userDetails");
+  window.location.href = "./index.html";
+};
+
 // Initialize the workout page
 const initializePage = () => {
   displayUserDetails(); // Display user details
@@ -145,6 +169,8 @@ const initializePage = () => {
   document
     .querySelector(".close")
     .addEventListener("click", closeExerciseModal);
+
+  document.querySelector("#sign-out").addEventListener("click", signOut);
 
   document.getElementById("main-content").classList.remove("hidden");
 };
