@@ -62,7 +62,20 @@ function handleFormSubmission(event) {
   // Validate form data
   if (validateFormData(userDetails)) {
     // Save user data in localStorage
-    localStorage.setItem("userDetails", JSON.stringify(userDetails));
+    localStorage.setItem(
+      "userDetails",
+      JSON.stringify({
+        ...userDetails,
+        caloriesPerday:
+          userDetails.dietaryGoal === "weight-loss"
+            ? 1500
+            : userDetails.dietaryGoal === "weight-gain"
+            ? 2500
+            : 2000,
+        dietOmissions: "",
+        dietRestrictions: "",
+      })
+    );
     document.getElementById("loading-ui").classList.remove("loading");
 
     // Redirect to scheduler page
