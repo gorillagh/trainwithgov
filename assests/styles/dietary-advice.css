@@ -1,0 +1,168 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #001d3d; /* Matches your color scheme */
+  color: #ffc300;
+  padding: 20px;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffc300;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  background-color: #ffc300;
+  color: #001d3d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0b300;
+}
+
+#sign-out {
+  float: right;
+  margin: 10px;
+}
+
+#weekly-meal {
+  margin-bottom: 20px;
+}
+
+/* Meal Suggestions Section */
+#meal-suggestions {
+  margin: 20px 0;
+}
+
+#meal-suggestions h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.meal-item {
+  background-color: #003566;
+  color: #ffc300;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.meal-item h4 {
+  margin-bottom: 5px;
+}
+
+.meal-item a {
+  color: #ffc300;
+  text-decoration: none;
+}
+
+.meal-item a:hover {
+  text-decoration: underline;
+}
+
+#day-of-week {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* User Preferences Section */
+#user-preferences {
+  background-color: #003566;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+#user-preferences h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+#preferences-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#preferences-form label {
+  font-size: 1rem;
+}
+
+#preferences-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#preferences-form button {
+  align-self: center;
+  background-color: #ffc300;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #ffc300;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  #meal-suggestions h2 {
+    font-size: 1.6rem;
+  }
+
+  #user-preferences h2 {
+    font-size: 1.5rem;
+  }
+}

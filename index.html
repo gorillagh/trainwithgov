@@ -12,111 +12,126 @@
     />
     <link rel="stylesheet" href="./assests/styles/globals.css" />
     <link rel="stylesheet" href="./assests/styles/index.css" />
+    <link rel="stylesheet" href="./assests/styles/index-about.css" />
   </head>
   <body>
     <div id="main-content" class="hidden">
       <!-- Hero Section -->
       <header>
+        <h2 id="logo">TrainWithGov</h2>
         <div class="hero">
-          <video autoplay muted loop playsinline id="heroVideo">
-            <source src="./assests/videos/heroVid1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="hero-content">
-            <h1>TrainWithGov</h1>
-            <p>Your personal fitness journey starts here!</p>
-            <h2 class="motivational-message">
-              "Motivation gets you started, habit keeps you going."
-            </h2>
-            <form action="" class="form">
-              <label for="name">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder=""
-                />
-                <span>Name</span>
-              </label>
-              <label for="email">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder=""
-                />
-                <span>Email</span>
-              </label>
-              <label for="age">
-                <input type="number" id="age" name="age" min="1" required />
-                <span>Age</span>
-              </label>
-              <label for="gender">
-                <select id="gender" name="gender" required>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </select>
-                <span>gender</span>
-              </label>
+          <div class="hero-overlay">
+            <video autoplay muted loop playsinline id="heroVideo">
+              <source src="./assests/videos/heroVid1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+              <h1 class="motivational-message">
+                "Motivation gets you started, habit keeps you going."
+              </h1>
+              <form action="" class="form">
+                <p class="title">Your personal fitness journey starts here!</p>
+                <label for="name">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder=""
+                  />
+                  <span>Name</span>
+                </label>
+                <label for="email">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder=""
+                  />
+                  <span>Email</span>
+                </label>
+                <label for="age">
+                  <input type="number" id="age" name="age" min="1" required />
+                  <span>Age</span>
+                </label>
+                <label for="gender">
+                  <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span>gender</span>
+                </label>
 
-              <label for="dietary-goals">
-                <select id="dietary-goals" name="dietary-goals" required>
-                  <option value="weight-loss">Weight Loss</option>
-                  <option value="weight-gain">Weight Gain</option>
-                  <option value="maintenance">Maintenance</option>
-                </select>
-                <span>Dietary goal</span>
-              </label>
+                <label for="dietary-goals">
+                  <select id="dietary-goals" name="dietary-goals" required>
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="weight-gain">Weight Gain</option>
+                    <option value="maintenance">Maintenance</option>
+                  </select>
+                  <span>Dietary goal</span>
+                </label>
 
-              <label for="fitness-goals">
-                <select id="fitness-goals" name="fitness-goals" required>
-                  <option value="weight-loss">Weight Loss</option>
-                  <option value="muscle-gain">Muscle Gain</option>
-                  <option value="endurance">Endurance</option>
-                  <option value="flexibility">Flexibility</option>
-                </select>
-                <span>Fitness goal</span>
-              </label>
+                <label for="fitness-goals">
+                  <select id="fitness-goals" name="fitness-goals" required>
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="muscle-gain">Muscle Gain</option>
+                    <option value="endurance">Endurance</option>
+                    <option value="flexibility">Flexibility</option>
+                  </select>
+                  <span>Fitness goal</span>
+                </label>
 
-              <button type="submit" class="submit">Lets Go</button>
-            </form>
+                <button type="submit" class="submit">Lets Go</button>
+              </form>
+            </div>
           </div>
         </div>
       </header>
 
       <!-- About Section -->
       <section id="about">
-        <h2>About TrainWithGov</h2>
-        <p>
-          Hi, I'm Governor, your personal fitness trainer. I believe in
-          empowering people to achieve their fitness goals through consistency,
-          balanced routines, and a focus on both physical and mental well-being.
-        </p>
-        <p>
-          At TrainWithGov, we aim to guide you through every step of your
-          fitness journey with personalized workout routines and dietary plans
-          tailored to your specific goals. This app is designed to bring my
-          coaching to you anytime, anywhere, ensuring you stay on track to reach
-          your targets even when I'm not physically there with you.
-        </p>
-        <p>
-          <strong>Fitness Philosophy:</strong> "A healthy body nurtures a
-          healthy mind. When you take control of your fitness, you take control
-          of your life."
-        </p>
+        <div class="about-container">
+          <div class="about-text">
+            <h2>About TrainWithGov</h2>
+            <p>
+              Hi, I'm <strong>Governor</strong>, your personal fitness trainer.
+              I believe in empowering people to achieve their fitness goals
+              through consistency, balanced routines, and a focus on both
+              physical and mental well-being.
+            </p>
+            <p>
+              At TrainWithGov, we aim to guide you through every step of your
+              fitness journey with personalized workout routines and dietary
+              plans tailored to your specific goals. This app is designed to
+              bring my coaching to you anytime, anywhere, ensuring you stay on
+              track to reach your targets even when I'm not physically there
+              with you.
+            </p>
+            <p class="philosophy">
+              <strong>Fitness Philosophy:</strong> "A healthy body nurtures a
+              healthy mind. When you take control of your fitness, you take
+              control of your life."
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="./assests/images/about.png"
+              alt="Governor, your trainer"
+            />
+          </div>
+        </div>
       </section>
 
       <!-- Footer -->
       <footer>
-        <nav>
+        <!-- <nav>
           <ul>
             <li><a href="scheduler.html">Daily Workout Scheduler</a></li>
             <li><a href="dietary-advice.html">Dietary Advice</a></li>
           </ul>
-        </nav>
+        </nav> -->
         <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
       </footer>
     </div>

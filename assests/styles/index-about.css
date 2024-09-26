@@ -1,0 +1,98 @@
+/* About Section Styling */
+#about {
+  padding: 60px 20px;
+  background-color: #f3e9dd;
+  color: #333;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1 1 65%; /* Larger portion for text */
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #003566;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.philosophy {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #001d3d;
+}
+
+.about-image {
+  flex: 1 1 30%; /* Smaller portion for image */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px; /* Limit the width on larger screens */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    flex: none;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+  }
+
+  .philosophy {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.8rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .philosophy {
+    font-size: 1.1rem;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+}

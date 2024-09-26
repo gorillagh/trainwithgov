@@ -2,6 +2,8 @@ color schemes: red, green, black
 
 background colors: #F3E9DD, #EEE9E3, #F8F7F4
 
+primary colo= #ffca10;
+
 fonts: 
 1. Poppins, Helvetica, Arial, sans-serif --- trainerize.com
 2. "Proxima Nova Bold", Helvetica, Arial, sans-serif --- fitbit.com

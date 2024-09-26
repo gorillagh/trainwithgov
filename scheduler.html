@@ -6,32 +6,33 @@
     <title>Daily Workout Scheduler - TrainWithGov</title>
     <link rel="stylesheet" href="./assests/styles/globals.css" />
     <link rel="stylesheet" href="./assests/styles/scheduler.css" />
+    <link rel="stylesheet" href="./assests/styles/exercises.css" />
   </head>
   <body>
     <div id="main-content" class="hidden">
       <!-- Header Section -->
       <header>
-        <div>
-          <h1>Daily Workout Scheduler</h1>
-          <button id="sign-out">Leave</button>
+        <div class="header-container">
+          <div class="sign-out-container">
+            <button id="sign-out">Leave</button>
+          </div>
+          <div class="motivational-message-container">
+            <h2 class="motivational-message">
+              <!-- ---motivaational message will be displayed here-- -->
+            </h2>
+            <small class="motivation-author">
+              <!-- --Authors name goes here--- -->
+            </small>
+          </div>
+          <p id="user-details">
+            <!-- User's name and fitness goal will be displayed here -->
+          </p>
         </div>
-        <h2 class="motivational-message">
-          <!-- ---motivaational message will be displayed here-- -->
-        </h2>
-        <small class="motivation-author">
-          <!-- --Authors name goes here--- -->
-        </small>
-        <p id="user-details">
-          <!-- User's name and fitness goal will be displayed here -->
-        </p>
       </header>
+      <!-- Progress Tracker -->
 
       <!-- Daily Workout Section -->
       <section id="daily-workout">
-        <h2><span id="day-of-week"></span>'s Workout</h2>
-        <p id="body-part"></p>
-        <!-- Brief on body part for the day -->
-
         <!-- Workout Day Selection -->
         <form id="day-selector">
           <label for="workout-day">Select Workout Day:</label>
@@ -46,21 +47,26 @@
           </select>
           <button id="view-workout-btn" type="submit">View Workout</button>
         </form>
+        <h2><span id="day-of-week"></span>'s Workout</h2>
+        <section id="progress-tracker">
+          <div class="progress-info">
+            <ul id="completed-exercises">
+              <!-- Completed exercises will be added here dynamically -->
+            </ul>
+          </div>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <p class="progress-percentage">0% Complete</p>
+        </section>
+        <p id="body-part"></p>
+        <!-- Brief on body part for the day -->
 
         <!-- List of Exercises -->
         <div id="exercise-list">
           <h3>Exercises:</h3>
           <!-- ---display exercises here-- -->
         </div>
-      </section>
-
-      <!-- Progress Tracker -->
-      <section id="progress-tracker">
-        <h2>Your Progress</h2>
-        <p>Completed Exercises:</p>
-        <ul id="completed-exercises">
-          <!-- Completed exercises will be added here dynamically -->
-        </ul>
       </section>
 
       <!-- Modal for Exercise Details -->
@@ -77,12 +83,7 @@
 
       <!-- Footer Section -->
       <footer>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dietary-advice.html">Dietary Advice</a></li>
-          </ul>
-        </nav>
+        <a href="./dietary-advice.html">Meal Planner</a>
         <p>&copy; 2024 TrainWithGov. All rights reserved.</p>
       </footer>
     </div>

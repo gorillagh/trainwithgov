@@ -260,3 +260,16 @@ const initializePage = () => {
 
 // On page load
 document.addEventListener("DOMContentLoaded", initializePage);
+
+const completedExercises = document.getElementById("completed-exercises");
+const progressBar = document.querySelector(".progress");
+const progressPercentage = document.querySelector(".progress-percentage");
+
+const updateProgress = (completed, total) => {
+  const progress = (completed / total) * 100;
+  progressBar.style.width = `${progress}%`;
+  progressPercentage.textContent = `${Math.round(progress)}% Complete`;
+};
+
+// Example: 3 exercises completed out of 5
+updateProgress(1, 5);

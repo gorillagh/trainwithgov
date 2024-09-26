@@ -1,10 +1,33 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #f3e9dd;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.hero-overlay {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 #heroVideo {
@@ -17,18 +40,21 @@
   width: auto;
   height: auto;
   z-index: -1;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  padding-top: 2rem;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
   position: relative;
-  z-index: 1; /* Puts content above the video */
+  z-index: 1;
   text-align: center;
-  color: white; /* Text color to contrast against the video */
+  color: white;
 }
 
 .hero-content h1 {
@@ -36,11 +62,16 @@
   margin-bottom: 0.5em;
 }
 
+.hero-content .motivational-message {
+  font-size: 2.5em;
+}
+
 .hero-content p {
   font-size: 1.5em;
   margin-bottom: 1em;
 }
 
+/* Adjust Button Style */
 .hero-content .btn {
   padding: 0.75em 2em;
   background-color: #ff7f50;
@@ -50,144 +81,125 @@
   font-size: 1.2em;
 }
 
-
-/* ----------User Details form ------------- */
-/* From Uiverse.io by ammarsaa */ 
+/* Form Styling */
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    /* max-width: 500px; */
-    width: 60%;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    background-color: rgba(26, 26, 26, 0.8);
-    color: #fff;
-    border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: #fff;
+  border: 1px solid #333;
+}
+.form label {
+  position: relative;
+}
+
+.form label input,
+.form label select {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 30px 10px 5px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.form label input + span,
+.form label select + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 12.5px;
+  font-size: 1rem;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label input:focus + span,
+.form label input:valid + span,
+.form label select:valid + span {
+  color: #f7d24f;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.submit {
+  border: none;
+  padding: 15px;
+  border-radius: 40px;
+  color: #000;
+  font-size: 20px;
+  background-color: #f8d247;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submit:hover {
+  background-color: #ffca10;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .hero-content {
+    width: 80%;
   }
-  
-  .title {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    color: #00bfff;
+  .hero-content h1 {
+    font-size: 2.5em;
   }
-  
-  .title::before {
-    width: 18px;
-    height: 18px;
+  .hero-content .motivational-message {
+    font-size: 2em;
   }
-  
-  .title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
+  .form {
+    width: 70%;
   }
-  
-  .title::before,
-  .title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: #00bfff;
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    width: 90%;
   }
-  
-  .message, 
-  .signin {
-    font-size: 14.5px;
-    color: rgba(255, 255, 255, 0.7);
+  .hero-content h1 {
+    font-size: 2.2em;
   }
-  
-  .signin {
-    text-align: center;
+  .hero-content .motivational-message {
+    font-size: 1.8em;
   }
-  
-  .signin a:hover {
-    text-decoration: underline royalblue;
+  .form {
+    width: 80%;
   }
-  
-  .signin a {
-    color: #00bfff;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8em;
   }
-  
-  .flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
+  .hero-content .motivational-message {
+    font-size: 1.5em;
   }
-  
-  .form label {
-    position: relative;
+  .form {
+    width: 90%;
   }
-  
-  .form label input, .form label select {
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    padding: 20px 05px 05px 10px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.5em;
   }
-  
-  .form label input + span, .form label select + span {
-    color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
+  .hero-content .motivational-message {
+    font-size: 1.2em;
   }
-  
-  .form label input:placeholder-shown + span, .form label select:placeholder-shown + span {
-    top: 12.5px;
-    font-size: 0.9em;
+  .form {
+    width: 95%;
   }
-  
-  .form label input:focus + span,
-  .form label input:valid + span, .form label select:valid + span {
-    color: #00bfff;
-    top: 0px;
-    font-size: 0.7em;
-    font-weight: 600;
+  .form label input,
+  .form label select {
+    padding: 20px 10px 5px 10px;
   }
-  
-  .input {
-    font-size: medium;
-  }
-  
-  .submit {
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
-    background-color: #00bfff;
-  }
-  
-  .submit:hover {
-    background-color: #00bfff96;
-  }
-  
-  @keyframes pulse {
-    from {
-      transform: scale(0.9);
-      opacity: 1;
-    }
-  
-    to {
-      transform: scale(1.8);
-      opacity: 0;
-    }
-  }
+}
