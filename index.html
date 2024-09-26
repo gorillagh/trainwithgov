@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TrainWithGov - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assests/styles/globals.css" />
     <link rel="stylesheet" href="./assests/styles/index.css" />
   </head>
@@ -12,45 +18,72 @@
       <!-- Hero Section -->
       <header>
         <div class="hero">
-          <h1>Welcome to TrainWithGov</h1>
-          <p>Your personal fitness journey starts here!</p>
-          <h2 class="motivational-message">
-            "Motivation gets you started, habit keeps you going."
-          </h2>
-          <form action="">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
+          <video autoplay muted loop playsinline id="heroVideo">
+            <source src="./assests/videos/heroVid1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="hero-content">
+            <h1>TrainWithGov</h1>
+            <p>Your personal fitness journey starts here!</p>
+            <h2 class="motivational-message">
+              "Motivation gets you started, habit keeps you going."
+            </h2>
+            <form action="" class="form">
+              <label for="name">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=""
+                />
+                <span>Name</span>
+              </label>
+              <label for="email">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=""
+                />
+                <span>Email</span>
+              </label>
+              <label for="age">
+                <input type="number" id="age" name="age" min="1" required />
+                <span>Age</span>
+              </label>
+              <label for="gender">
+                <select id="gender" name="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <span>gender</span>
+              </label>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required />
+              <label for="dietary-goals">
+                <select id="dietary-goals" name="dietary-goals" required>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="weight-gain">Weight Gain</option>
+                  <option value="maintenance">Maintenance</option>
+                </select>
+                <span>Dietary goal</span>
+              </label>
 
-            <label for="age">Your Age:</label>
-            <input type="number" id="age" name="age" min="1" required />
+              <label for="fitness-goals">
+                <select id="fitness-goals" name="fitness-goals" required>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="muscle-gain">Muscle Gain</option>
+                  <option value="endurance">Endurance</option>
+                  <option value="flexibility">Flexibility</option>
+                </select>
+                <span>Fitness goal</span>
+              </label>
 
-            <label for="gender">Your Gender:</label>
-            <select id="gender" name="gender" required>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-
-            <label for="dietary-goals">Your Dietary Goal:</label>
-            <select id="dietary-goals" name="dietary-goals" required>
-              <option value="weight-loss">Weight Loss</option>
-              <option value="weight-gain">Weight Gain</option>
-              <option value="maintenance">Maintenance</option>
-            </select>
-
-            <label for="fitness-goals">Your Fitness Goal:</label>
-            <select id="fitness-goals" name="fitness-goals" required>
-              <option value="weight-loss">Weight Loss</option>
-              <option value="muscle-gain">Muscle Gain</option>
-              <option value="endurance">Endurance</option>
-              <option value="flexibility">Flexibility</option>
-            </select>
-
-            <button type="submit">Get Started</button>
-          </form>
+              <button type="submit" class="submit">Lets Go</button>
+            </form>
+          </div>
         </div>
       </header>
 

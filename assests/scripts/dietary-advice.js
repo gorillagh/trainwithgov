@@ -58,7 +58,6 @@ async function loadUserDetails() {
       weekday: "long",
     });
     document.getElementById("day-of-week").textContent = dayOfWeek;
-    console.log(userDetails.caloriesPerDay);
     await fetchMealPlan(
       userDetails.caloriesPerday || "",
       userDetails.dietRestrictions || "",
@@ -81,9 +80,9 @@ const requestOptions = {
   headers: myHeaders,
   redirect: "follow",
 };
-async function fetchMealPlan(caloriesPerDay, dietRestrictions, dietOmissions) {
-  console.log(caloriesPerDay, dietRestrictions, dietOmissions);
-  const apiUrl = `https://Spoonacular-API.proxy-production.allthingsdev.co/mealplanner/generate?timeFrame=day&targetCalories=${caloriesPerDay}&diet=${dietRestrictions}&exclude=${dietOmissions}`;
+async function fetchMealPlan(caloriesPerday, dietRestrictions, dietOmissions) {
+  console.log(caloriesPerday, dietRestrictions, dietOmissions);
+  const apiUrl = `https://Spoonacular-API.proxy-production.allthingsdev.co/mealplanner/generate?timeFrame=day&targetCalories=${caloriesPerday}&diet=${dietRestrictions}&exclude=${dietOmissions}`;
 
   try {
     // const response = await fetch(apiUrl, requestOptions);
@@ -164,6 +163,18 @@ document.getElementById("preferences-form").addEventListener("submit", (e) => {
   // Fetch the meal plan based on the user's preferences
   fetchMealPlan(caloriesPerday, dietRestrictions, dietOmissions);
 });
+
+
+// Load weekly meal plan
+document.getElementById("weekly-meal").addEventListener("click", async()=>{
+  const userDetails = await JSON.parse(localStorage.getItem("userDetails"));
+  console.log(await userDetails);
+  const response = await fetch(`https://Spoonacular-API.proxy-production.allthingsdev.co/mealplanner/generate?timeFrame=week&targetCalories=${await userDetails.caloriesPerday||""}&diet=${await userDetails.dietRestrictions||""}&exclude=${await userDetails.dietOmissions||""}`,
+     requestOptions)
+  const result = await response.json()
+  console.log(result);
+  // const weekMealPlan = await
+})
 
 // Load user details on page load
 document.addEventListener("DOMContentLoaded", loadUserDetails);
