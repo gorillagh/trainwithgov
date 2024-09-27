@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personalized Daily Dietary Advice - TrainWithGov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assests/styles/globals.css" />
     <link rel="stylesheet" href="./assests/styles/dietary-advice.css" />
   </head>
   <body>
     <!-- Header Section -->
     <header>
+      <div class="sign-out-container">
+        <a href="./scheduler.html"><button id="meal-planner-btn">Workout</button></a>
+
+        <button id="sign-out">Leave</button>
+      </div>
       <h1>Personalized Daily Dietary Advice</h1>
       <p>Based on your preferences and fitness goals:</p>
-
-      <button id="sign-out">Leave</button>
     </header>
 
+    <div class="main-container">
     <!-- Meal Suggestions Section -->
     <section id="meal-suggestions">
       <button id="weekly-meal">Week's Meal Plan</button>
@@ -86,6 +96,19 @@
         <button type="submit">Update Meal Plan</button>
       </form>
     </section>
+  </div>
+
+  <!-- /* From Uiverse.io by mobinkakei */ -->
+  <div class="wrapper" id="loading-ui">
+    <div class="loading-items-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+  </div>
 
     <!-- Footer Section -->
     <footer>

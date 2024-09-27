@@ -161,9 +161,9 @@ const loadWorkoutForToday = (selectedDayNo) => {
     document.getElementById("loading-ui").classList.add("loading");
 
     try {
-      // const exercises = await getExercisesForBodyPart(part);
-      // exercises.slice(0, 5).forEach((exercise) => {
-      sampleExercises.forEach((exercise) => {
+      const exercises = await getExercisesForBodyPart(part);
+      exercises.slice(0, 5).forEach((exercise) => {
+      // sampleExercises.forEach((exercise) => {
         const exerciseCard = document.createElement("div");
 
         const exerciseImage = document.createElement("img");
@@ -273,3 +273,6 @@ const updateProgress = (completed, total) => {
 
 // Example: 3 exercises completed out of 5
 updateProgress(1, 5);
+
+
+document.getElementById("mark-done").addEventListener("click", closeExerciseModal)

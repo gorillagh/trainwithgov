@@ -11,13 +11,19 @@ body {
   line-height: 1.6;
   background-color: #001d3d; /* Matches your color scheme */
   color: #ffc300;
-  padding: 20px;
   margin: 0;
 }
-
+.main-container{
+  width: 80%;
+  margin: auto;
+}
 header {
   text-align: center;
-  padding: 20px 0;
+  background-color: #001d3d;
+  /* background-image: url("../images/about.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header h1 {
@@ -31,26 +37,6 @@ header p {
   margin-bottom: 20px;
 }
 
-/* Button Styling */
-button {
-  background-color: #ffc300;
-  color: #001d3d;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #e0b300;
-}
-
-#sign-out {
-  float: right;
-  margin: 10px;
-}
 
 #weekly-meal {
   margin-bottom: 20px;
@@ -68,8 +54,8 @@ button:hover {
 }
 
 .meal-item {
-  background-color: #003566;
-  color: #ffc300;
+  background-color: #fff;
+  color: #000e1d;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;

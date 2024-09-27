@@ -1,3 +1,8 @@
+body {
+  font-family: "Montserrat Alternates", sans-serif !important;
+  /* background-color: #f3e9dd; */
+}
+
 /* Hero Section Styling */
 header {
   background-image: url("../images/scheduler-hero.jpg");
@@ -6,12 +11,13 @@ header {
   background-size: cover;
   display: flex;
 
+
   border-bottom: 2px solid #ffc300; /* Accent yellow from your palette */
 }
 .header-container {
-  background-color: rgba(0, 29, 61, 0.7); /* Deep navy background */
+  background-color: rgba(0, 0,0, 0.7); /* Deep navy background */
   color: white; /* White text for contrast */
-  padding: 40px 20px;
+  padding: 6rem 0 3rem;;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -27,22 +33,42 @@ header {
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+  gap: 50px;
+
 }
 
+
+
 #sign-out {
-  background-color: #ffc300; /* Yellow accent */
-  color: #001d3d; /* Navy for contrast */
+  background-color: #f72020; /* Yellow accent */
+  color: white; /* Navy for contrast */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
+#meal-planner-btn{
+  background-color:#f5c62d; /* Yellow accent */
+  color: white; /* Navy for contrast */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+#meal-planner-btn:hover{
+  background-color: #ffc300;
+}
+
 #sign-out:hover {
-  background-color: #ffca10; /* Slightly brighter yellow on hover */
+  background-color: #fd0404; /* Slightly brighter yellow on hover */
 }
 
 /* Motivational message container */
@@ -54,6 +80,7 @@ header {
 .motivational-message {
   font-size: 2rem;
   font-style: italic;
+  font-family: "Montserrat Alternates", sans-serif !important;
   margin: 10px 0;
   color: #ffc300; /* Accent color for the quote */
   line-height: 1.4;
@@ -75,6 +102,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 80%;
   margin: 20px auto;
+  
 }
 
 /* Responsive Design */
@@ -214,4 +242,28 @@ header {
   to {
     opacity: 1;
   }
+}
+
+
+#mark-done{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#mark-done button{
+background-color: #000;
+color: #ffc300;
+border-radius: 30px;
+border: none;
+width: 60%;
+padding: 1rem;
+font-weight: 500;
+cursor: pointer;
+margin: 1rem 0;
+}
+
+#mark-done button:hover{
+  background-color: #695206;
 }

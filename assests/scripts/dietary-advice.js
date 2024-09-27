@@ -85,22 +85,26 @@ async function fetchMealPlan(caloriesPerday, dietRestrictions, dietOmissions) {
   const apiUrl = `https://Spoonacular-API.proxy-production.allthingsdev.co/mealplanner/generate?timeFrame=day&targetCalories=${caloriesPerday}&diet=${dietRestrictions}&exclude=${dietOmissions}`;
 
   try {
-    // const response = await fetch(apiUrl, requestOptions);
-    // const data = await response.json();
-    // console.log("data-->", data);
-    // if (data.meals && data.meals.length > 0) {
-    //   displayMealPlan(data.meals, data.nutrients);
-    // } else {
-    //   console.error("No meals found");
-    // }
+    document.getElementById("loading-ui").classList.add("loading");
 
-    if (sampleData.meals && sampleData.meals.length > 0) {
-      displayMealPlan(sampleData.meals, sampleData.nutrients);
+    const response = await fetch(apiUrl, requestOptions);
+    const data = await response.json();
+    console.log("data-->", data);
+    if (data.meals && data.meals.length > 0) {
+      displayMealPlan(data.meals, data.nutrients);
     } else {
       console.error("No meals found");
     }
+
+    // if (sampleData.meals && sampleData.meals.length > 0) {
+    //   displayMealPlan(sampleData.meals, sampleData.nutrients);
+    // } else {
+    //   console.error("No meals found");
+    // }
   } catch (error) {
     console.error("Error fetching meal plan:", error);
+  }finally{
+    document.getElementById("loading-ui").classList.remove("loading");
   }
 }
 

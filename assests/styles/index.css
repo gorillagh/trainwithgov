@@ -13,21 +13,23 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
 }
 
 .hero-overlay {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  padding: 3rem 0;
 }
 
 #heroVideo {

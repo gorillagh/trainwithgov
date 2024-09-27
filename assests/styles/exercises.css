@@ -11,7 +11,7 @@
 }
 
 #daily-workout h2 {
-  color: #003566;
+  color: #fff;
   font-size: 1.8em;
   margin-bottom: 10px;
   text-align: center;
@@ -34,7 +34,8 @@ form {
 form label {
   margin-right: 10px;
   font-size: 1em;
-  color: #001d3d;
+  color: #fff;
+  font-weight: 500;
 }
 
 #workout-day {
